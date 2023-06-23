@@ -19,6 +19,7 @@ class BillsController():
             elif isinstance(json_data, list):
                 # Si es una lista, utiliza directamente los documentos
                 documentos = [encoded_json]
+        
             else:
                 raise ValueError("El JSON no representa un objeto válido o una lista de documentos.")
             
