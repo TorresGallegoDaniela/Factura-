@@ -5,20 +5,14 @@ import json
 
 class BillsController():
     
-    def get_json_from_url(self, url: str):
+    def get_json_from_url(self, json: str):
         try:
-            # Decodificar la URL
-            decoded_url = unquote(url)
-            
-            response = requests.get(decoded_url)
-            response.raise_for_status()
             
             # Obtener el contenido JSON de la respuesta
-            json_data = response.json()
+            json_data = json.json()
             
             # Verificar si el JSON es un objeto o una lista de documentos
             if isinstance(json_data, dict):
-                print("aca")
                 # Si es un objeto, conviértelo en una lista de un solo elemento
                 documentos = [json_data]
                 #print(documentos)
