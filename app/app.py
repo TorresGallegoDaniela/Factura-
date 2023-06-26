@@ -28,4 +28,4 @@ app.add_middleware(
 )
 
 # Register the endpoints for each route
-app.include_router(bill, prefix='/api/v1')  # Register the endpoints for user management
+app.include_router(bill, prefix='/api/v1/bills')  # Register the endpoints for user management
